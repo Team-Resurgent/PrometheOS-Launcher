@@ -49,9 +49,8 @@ void network::configure()
 	bool isXboxVersion2 = netConfigParams.V2_Tag == 0x58425632;
 	bool isDirty = false;
 
-	uint32_t flag = settingsManager::getNetworkMode() == networkModeStatic ? XDK_NETWORK_CONFIG_MANUAL_IP : 0;
-
-	uint32_t ipAddress = settingsManager::getNetworkMode() == networkModeStatic ? settingsManager::getNetworkAddress() : 0;
+	uint32_t flag = 0;
+	uint32_t ipAddress = 0;
 	uint32_t* ip = isXboxVersion2 ? &netConfigParams.V2_IP : &netConfigParams.V1_IP;
 	if (*ip != ipAddress)
 	{
@@ -60,47 +59,11 @@ void network::configure()
 	}
 
 	uint32_t* subnet = isXboxVersion2 ? &netConfigParams.V2_Subnetmask : &netConfigParams.V1_Subnetmask; 
-	if (*subnet != settingsManager::getNetworkSubnet())
-	{
-		*subnet = settingsManager::getNetworkSubnet();
-		isDirty = true;
-	}
-
 	uint32_t* gateway = isXboxVersion2 ? &netConfigParams.V2_Defaultgateway : &netConfigParams.V1_Defaultgateway; 
-	if (*gateway != settingsManager::getNetworkGateway())
-	{
-		*gateway = settingsManager::getNetworkGateway();
-		isDirty = true;
-	}
 
-	if (settingsManager::getNetworkMode() == networkModeStatic || settingsManager::getNetworkMode() == networkModeDynamicManualDns)
-	{
-		uint32_t* primaryDns = isXboxVersion2 ? &netConfigParams.V2_DNS1 : &netConfigParams.V1_DNS1; 
-		if (*primaryDns != settingsManager::getNetworkPrimaryDns())
-		{
-			*primaryDns = settingsManager::getNetworkPrimaryDns();
-			isDirty = true;
-		}
-
-		uint32_t* secondaryDns = isXboxVersion2 ? &netConfigParams.V2_DNS2 : &netConfigParams.V1_DNS2; 
-		if (*secondaryDns != settingsManager::getNetworkSecondaryDns())
-		{
-			*secondaryDns = settingsManager::getNetworkSecondaryDns();
-			isDirty = true;
-		}
-
-		flag |= XDK_NETWORK_CONFIG_MANUAL_DNS;
-	}
-	
 	if (netConfigParams.Flag != flag)
 	{
 		netConfigParams.Flag = flag;
-		isDirty = true;
-	}
-
-	if (isDirty)
-	{
-		XNetSaveConfigParams(&netConfigParams);
 	}
 }
 

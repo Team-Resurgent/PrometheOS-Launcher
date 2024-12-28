@@ -6,12 +6,9 @@
 #include "..\component.h"
 #include "..\ssfn.h"
 #include "..\inputManager.h"
-#include "..\settingsManager.h"
-#include "..\hdmiDevice.h"
 #include "..\stringUtility.h"
 #include "..\xboxConfig.h"
 #include "..\theme.h"
-#include "..\audioPlayer.h"
 
 menuScene::menuScene(const char* title, const char* subTitle, pointerVector<utils::intContainer*>* sceneItems)
 {
@@ -96,14 +93,6 @@ void menuScene::render()
 			{
 				menuText = strdup("System");
 			}
-			else if (sceneItem == sceneItemFlashToolsScene)
-			{
-				menuText = strdup("Flash Tools");
-			}
-			else if (sceneItem == sceneItemSettingsScene)
-			{
-				menuText = strdup("Settings");
-			}
 			else if (sceneItem == sceneItemGamesScene)
 			{
 				menuText = strdup("Games");
@@ -115,23 +104,6 @@ void menuScene::render()
 			else if (sceneItem == sceneItemEepromToolsScene)
 			{
 				menuText = strdup("EEPROM Tools");
-			}
-			else if (sceneItem == sceneItemDateTimeScene)
-			{
-				bool doRtc = settingsManager::getRtcEnable() == true && xboxConfig::getHasRtcExpansion() == true;
-				menuText = strdup(doRtc ? "RTC Exapansion" : "Date Time");
-			}
-			else if (sceneItem == sceneItemFlashFlowScene)
-			{
-				menuText = strdup("Flash Bank");
-			}
-			else if (sceneItem == sceneItemRemoveScene)
-			{
-				menuText = strdup("Remove Bank");
-			}
-			else if (sceneItem == sceneItemEditFlowScene)
-			{
-				menuText = strdup("Edit Bank");
 			}
 			else if (sceneItem == sceneItemMainScene)
 			{
@@ -160,26 +132,6 @@ void menuScene::render()
 			else if (sceneItem == sceneItemSystemInfoSceneAbout)
 			{
 				menuText = strdup("About");
-			}
-			else if (sceneItem == sceneItemVideoSettingsScene)
-			{
-				menuText = strdup("Video");
-			}
-			else if (sceneItem == sceneItemAudioSettingsScene)
-			{
-				menuText = strdup("Audio");
-			}
-			else if (sceneItem == sceneItemRegionSettingsScene)
-			{
-				menuText = strdup("Region");
-			}
-			else if (sceneItem == sceneItemNetworkSettingsScene)
-			{
-				menuText = strdup("Network");
-			}
-			else if (sceneItem == sceneItemHddUnlockScene)
-			{
-				menuText = strdup("HDD Lock / Unlock");
 			}
 			else if (sceneItem == sceneItemBackupEepromScene)
 			{
@@ -229,14 +181,6 @@ void menuScene::render()
 			{
 				menuText = strdup("LED Options");
 			}
-			else if (sceneItem == sceneItemMiscellaneousOptionsScene)
-			{
-				menuText = strdup("Miscellaneous Options");
-			}
-			else if (sceneItem == sceneItemCerbiosIniEditorScene)
-			{
-				menuText = strdup("Cerbios INI Editor");
-			}
 			else if (sceneItem == sceneItemFormatDriveOptionsScene)
 			{
 				menuText = strdup("Format Drive");
@@ -268,26 +212,6 @@ void menuScene::render()
 			else if (sceneItem == sceneItemPrometheOsThemesScene)
 			{
 				menuText = strdup("Themes");
-			}
-			else if (sceneItem == sceneItemAVSettingsScene)
-			{
-				menuText = strdup("AV Settings");
-			}
-			else if (sceneItem == sceneItemHdmiSettingsScene)
-			{
-				menuText = strdup("Cerbios HDMI Settings");
-			}
-			else if (sceneItem == sceneItemHdmiVideoSettingsScene)
-			{
-				menuText = strdup("Video Settings");
-			}
-			else if (sceneItem == sceneItemHdmiAdvancedScene)
-			{
-				menuText = strdup("Advanced");
-			}
-			else if (sceneItem == sceneItemHdmiInterpolationScene)
-			{
-				menuText = strdup("Interpolation");
 			}
 			else if (sceneItem == sceneItemLauncherFlowScene)
 			{

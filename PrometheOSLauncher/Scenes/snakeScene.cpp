@@ -6,8 +6,6 @@
 #include "..\component.h"
 #include "..\ssfn.h"
 #include "..\inputManager.h"
-#include "..\settingsManager.h"
-#include "..\hdmiDevice.h"
 #include "..\stringUtility.h"
 #include "..\xboxConfig.h"
 #include "..\theme.h"
@@ -119,11 +117,6 @@ void snakeScene::update()
             mIsGameOver = true; 
 		}
     } 
-
-	if (mIsGameOver == true && mPlayerScore > settingsManager::getSnakeHiScore())
-	{
-		settingsManager::setSnakeHiScore(mPlayerScore);
-	}
 
     if (mX == mFruitCordX && mY == mFruitCordY) 
 	{ 

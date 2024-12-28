@@ -7,11 +7,8 @@
 
 enum filePickerType
 { 
-	filePickerTypeBios = 0,
-	filePickerTypeEeprom = 1,
-	filePickerTypeUpdate = 2,
-	filePickerTypeUpdateRecovery = 3,
-	filePickerTypeXbe = 4
+	filePickerTypeEeprom = 0,
+	filePickerTypeXbe = 1
 }; 
 
 class filePickerScene : public scene

@@ -6,8 +6,6 @@
 #include "..\component.h"
 #include "..\ssfn.h"
 #include "..\inputManager.h"
-#include "..\settingsManager.h"
-#include "..\hdmiDevice.h"
 #include "..\stringUtility.h"
 #include "..\xboxConfig.h"
 #include "..\theme.h"
@@ -150,11 +148,6 @@ void invadersScene::update()
 		{
 			mBossDestroyed = true;
 		}
-	}
-
-	if (mIsGameOver == true && mPlayerScore > settingsManager::getInvadersHiScore())
-	{
-		settingsManager::setInvadersHiScore(mPlayerScore);
 	}
 
 	mCounter++;

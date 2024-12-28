@@ -375,21 +375,5 @@ public:
 	static uint32_t getButtonLedWhiteHoverStrokeColor();
 	static uint32_t getButtonLedWhiteHoverTextColor();
 
-	static void loadSkin(char* skinName);
-	static pointerVector<char*>* getSkins();
-	static void loadRandomSkin();
-
-	static void loadSoundPack(char* soundPackName);
-	static pointerVector<char*>* getSoundPacks();
-	static void loadRandomSoundPack();
-
-private:
-
-	static void parseConfigLine(char* param1, char* param2, char* buffer, unsigned long bufferSize);
-	static void parseUnsignedNumber(char* value, uint32_t& themeValue);
-	static void parseSignedNumber(char* value, int32_t& themeValue);
-	static void upperCase(char* value);
-	static void trimSpace(char* value);
-	static void loadConfig(char* buffer, uint32_t bufferSize);
-	static bool loadImage(const char* filePath, const char* imageKey);
+	static void loadSkin();
 };

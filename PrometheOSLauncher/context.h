@@ -2,8 +2,8 @@
 
 #include "inputManager.h"
 #include "math.h"
+#include "utils.h"
 #include "pointerMap.h"
-#include "modchip.h"
 #include "xboxInternals.h"
 
 #include <string>
@@ -40,9 +40,6 @@ typedef struct bitmapFont
 class context
 {
 public:
-	static modchip* getModchip();
-	static void setModchipType(modchipType modchipType);
-	static modchipType getModchipType();
 	static void setCurrentIp(const char* ip);
 	static char* getCurrentIp();
 	static void setCurrentFreeMem(uint32_t freeMem);
@@ -76,10 +73,6 @@ public:
 	static bitmapFont* getBitmapFontMedium();
 	static void setBitmapFontLarge(bitmapFont* font);
 	static bitmapFont* getBitmapFontLarge();
-	static void setSoundPackPath(const char* soundPackPath);
-	static char* getSoundPackPath();
-	static void setMusicId(uint32_t musicId);
-	static uint32_t getMusicId();
 	static void setMasterPassword(utils::dataContainer* masterPassword);
 	static utils::dataContainer* getMasterPassword();
 	static void setUserPassword(utils::dataContainer* userPassword);

@@ -1,21 +1,10 @@
 #include "context.h"
 #include "inputManager.h"
 #include "pointerMap.h"
-#include "modchip.h"
 #include "globalTypes.h"
-#include "modchipDummy.h"
-#include "modchipXenium.h"
-#include "modchipXecuter.h"
-#include "modchipSmartxx.h"
-#include "modchipModxo.h"
-#include "modchipAladdin1mb.h"
-#include "modchipAladdin2mb.h"
-#include "modchipXchanger.h"
 
 namespace 
 {
-	modchip* mModchip;
-	modchipType mModchipType;
 	char* mCurrentIp = NULL;
 	uint32_t mCurrentFreeMem = NULL;
 	char* mCurrentTitle = NULL;
@@ -41,58 +30,6 @@ namespace
 	bool mTakeScreenshot = false;
 	utils::dataContainer* mScreenshot = NULL;
 	CRITICAL_SECTION mMutex;
-}
-
-modchip* context::getModchip()
-{
-	return mModchip;
-}
-
-
-void context::setModchipType(modchipType modchipType)
-{
-	if (mModchip != NULL)
-	{
-		delete(mModchip);
-	}
-	if (modchipType == modchipTypeXenium)
-	{
-		mModchip = new modchipXenium();
-	}
-	else if (modchipType == modchipTypeXecuter)
-	{
-		mModchip = new modchipXecuter();
-	}
-	else if (modchipType == modchipTypeSmartxx)
-	{
-		mModchip = new modchipSmartxx();
-	}
-	else if (modchipType == modchipTypeModxo)
-	{
-		mModchip = new modchipModxo();
-	}
-	else if (modchipType == modchipTypeAladdin1mb)
-	{
-		mModchip = new modchipAladdin1mb();
-	}
-	else if (modchipType == modchipTypeAladdin2mb)
-	{
-		mModchip = new modchipAladdin2mb();
-	}
-	else if (modchipType == modchipTypeXchanger)
-	{
-		mModchip = new modchipXchanger();
-	}
-	else if (modchipType == modchipTypeDummy)
-	{
-		mModchip = new modchipDummy();
-	}
-	mModchipType = modchipType;
-}
-
-modchipType context::getModchipType()
-{
-	return mModchipType;
 }
 
 void context::setCurrentIp(const char* ip)
@@ -255,27 +192,6 @@ void context::setBitmapFontLarge(bitmapFont* font)
 bitmapFont* context::getBitmapFontLarge()
 {
 	return mBitmapFontLarge;
-}
-
-void context::setSoundPackPath(const char* soundPackPath)
-{
-	free(mSoundPackPath);
-	mSoundPackPath = strdup(soundPackPath);
-}
-
-char* context::getSoundPackPath()
-{
-	return strdup(mSoundPackPath);
-}
-
-void context::setMusicId(uint32_t musicId)
-{
-	mMusicId = musicId;
-}
-
-uint32_t context::getMusicId()
-{
-	return mMusicId;
 }
 
 void context::setMasterPassword(utils::dataContainer* masterPassword)

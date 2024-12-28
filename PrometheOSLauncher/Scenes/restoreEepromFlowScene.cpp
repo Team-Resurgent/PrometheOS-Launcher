@@ -8,8 +8,6 @@
 #include "..\component.h"
 #include "..\ssfn.h"
 #include "..\inputManager.h"
-#include "..\settingsManager.h"
-#include "..\hdmiDevice.h"
 #include "..\stringUtility.h"
 #include "..\xboxInternals.h"
 #include "..\fileSystem.h"

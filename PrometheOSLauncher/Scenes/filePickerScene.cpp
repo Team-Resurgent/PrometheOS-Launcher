@@ -1,7 +1,5 @@
 #include "filePickerScene.h"
 #include "sceneManager.h"
-#include "audioSettingsScene.h"
-#include "videoSettingsScene.h"
 #include "mainScene.h"
 
 #include "..\context.h"
@@ -9,7 +7,6 @@
 #include "..\component.h"
 #include "..\ssfn.h"
 #include "..\inputManager.h"
-#include "..\hdmiDevice.h"
 #include "..\stringUtility.h"
 #include "..\driveManager.h"
 #include "..\fileSystem.h"
@@ -56,21 +53,9 @@ pointerVector<fileSystem::FileInfoDetail*>* filePickerScene::getFileInfoDetails(
 			bool valid = fileInfoDetail->isDirectory;
 			if (fileInfoDetail->isFile)
 			{
-				if (mFilePickerType == filePickerTypeBios)
-				{
-					valid = context::getModchip()->isValidBankSize(fileInfoDetail->size);
-				}
-				else if (mFilePickerType == filePickerTypeEeprom)
+				if (mFilePickerType == filePickerTypeEeprom)
 				{
 					valid = fileInfoDetail->size == 256;
-				}
-				else if (mFilePickerType == filePickerTypeUpdate)
-				{
-					valid = context::getModchip()->isValidFlashSize(false, fileInfoDetail->size);
-				}
-				else if (mFilePickerType == filePickerTypeUpdateRecovery)
-				{
-					valid = context::getModchip()->isValidFlashSize(true, fileInfoDetail->size);
 				}
 				else if (mFilePickerType == filePickerTypeXbe)
 				{
@@ -228,21 +213,9 @@ void filePickerScene::render()
 {
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
 
-	if (mFilePickerType == filePickerTypeBios)
-	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Please select BIOS to flash...", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
-	}
-	else if (mFilePickerType == filePickerTypeEeprom)
+	if (mFilePickerType == filePickerTypeEeprom)
 	{
 		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Please select Eeprom to flash...", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
-	}
-	else if (mFilePickerType == filePickerTypeUpdate)
-	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Please select PrometheOS to flash...", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
-	}
-	else if (mFilePickerType == filePickerTypeUpdateRecovery)
-	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Please select Recovery to flash...", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
 	}
 	else if (mFilePickerType == filePickerTypeXbe)
 	{

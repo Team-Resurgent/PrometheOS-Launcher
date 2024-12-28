@@ -56,7 +56,6 @@ enum sceneItemEnum
 	sceneItemHdmiInterpolationScene,
 	sceneItemHddPasswordScene,
 	sceneItemGamesScene,
-	sceneItemCerbiosIniEditorScene,
 	sceneItemFormatDriveOptionsScene,
 	sceneItemFormatDrivePrimaryScene,
 	sceneItemFormatDriveSecondaryScene,

@@ -437,36 +437,6 @@ char* xboxConfig::getEncoderString()
 	return strdup("Xcalibur");
 }
 
-char* xboxConfig::getHdModString()
-{
-    NTSTATUS status;
-    status = HalWriteSMBusByte(I2C_HDMI_ADDRESS1, 0, 0);
-	uint32_t temp;
-	status |= HalReadSMBusByte(I2C_HDMI_ADDRESS1, 0, &temp);
-    if (status == STATUS_SUCCESS)
-    {
-	    uint32_t version1;
-		uint32_t version2;
-		uint32_t version3;
-		HalReadSMBusByte(I2C_HDMI_ADDRESS1, I2C_HDMI_VERSION1, &version1);
-		HalReadSMBusByte(I2C_HDMI_ADDRESS1, I2C_HDMI_VERSION2, &version2);
-		HalReadSMBusByte(I2C_HDMI_ADDRESS1, I2C_HDMI_VERSION3, &version3);
-		return stringUtility::formatString("V%i.%i.%i", version1, version2, version3);
-    } 
-    return strdup("Not Detected");
-}
-
-bool xboxConfig::getHasRtcExpansion()
-{
-	static int32_t hasRtc = -1;
-	if (hasRtc == -1)
-	{
-		uint32_t temp;
-		hasRtc = HalReadSMBusByte(0x68 << 1, 0, &temp) == 0 ? 1 : 0;
-	}
-	return hasRtc == 1;
-}
-
 double xboxConfig::RDTSC()
 {
  unsigned long a, b;
@@ -497,22 +467,4 @@ double xboxConfig::getCPUFreq()
 	fcpu /= (twin_result - twin_fsb);
 
 	return fcpu / 1000;
-}
-
-void xboxConfig::autoFix()
-{
-	// Check and clear any unused bits
-	if ((mAudioFlags & ~EEPROM_AUDIO_FLAGS_MASK) > 0 || (mVideoFlags & ~EEPROM_VIDEO_FLAGS_MASK) > 0)
-	{
-		utils::debugPrint("AutoFix: Cleaning Audio/Videio flags\n");
-		save();
-	}
-
-
-	// if invalid Video Standard set to NTSCM
-	if (getVideoStandardNTSCM() == false && getVideoStandardNTSCJ() == false && getVideoStandardPALI50() == false && getVideoStandardPALI60() == false)
-	{
-		utils::debugPrint("AutoFix: Fixing invalid video standard\n");
-		setVideoStandardNTSCM();
-	}
 }

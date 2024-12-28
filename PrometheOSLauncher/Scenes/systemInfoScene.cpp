@@ -1,18 +1,11 @@
 #include "systemInfoScene.h"
 #include "sceneManager.h"
-#include "removeScene.h"
-#include "flashFlowScene.h"
-#include "editFlowScene.h"
-#include "audioSettingsScene.h"
-#include "videoSettingsScene.h"
 
 #include "..\context.h"
 #include "..\drawing.h"
 #include "..\component.h"
 #include "..\ssfn.h"
 #include "..\inputManager.h"
-#include "..\settingsManager.h"
-#include "..\hdmiDevice.h"
 #include "..\stringUtility.h"
 #include "..\xboxConfig.h"
 #include "..\theme.h"
@@ -45,9 +38,6 @@ systemInfoScene::systemInfoScene(systemInfoCategoryEnum systemInfoCategory)
  		char* mac = stringUtility::formatString("Mac: %s", macString);
 		mInfoItems->add(mac);
 		free(macString);
-
-		char* rtcExpansion = stringUtility::formatString("RTC Expansion: %s", xboxConfig::getHasRtcExpansion() ? "Detected" : "Not Detected");
-		mInfoItems->add(rtcExpansion);
 	}
 	else if (mSystemInfoCategory == systemInfoCategoryStorage)
 	{
@@ -103,43 +93,17 @@ systemInfoScene::systemInfoScene(systemInfoCategoryEnum systemInfoCategory)
 		char* encoder = stringUtility::formatString("Encoder: %s", encoderString);
 		mInfoItems->add(encoder);
 		free(encoderString);
-
-		char* hdModString = xboxConfig::getHdModString();
-		char* hdMod = stringUtility::formatString("HD Mod: %s", hdModString);
-		mInfoItems->add(hdMod);
-		free(hdModString);
 	}
 	else if (mSystemInfoCategory == systemInfoCategoryAbout)
 	{
-		char *versionSemver = settingsManager::getVersionSting(settingsManager::getVersion());
-		char *modchipName = context::getModchip()->getName();
-		char *version = stringUtility::formatString("PrometheOS: V%s on %s", versionSemver, modchipName);
-		mInfoItems->add(version);
-		free(modchipName);
-		free(versionSemver);
+		char *app = strdup("PrometheOS Launcher");
+		mInfoItems->add(app);
 
-		char *by = strdup("Team Cerbios + Team Resurgent");
+		char *by = strdup("Team Resurgent");
 		mInfoItems->add(by);
 
 		char *coded = strdup("Coded By: EqUiNoX");
 		mInfoItems->add(coded);
-
-		char* skinAutthor = theme::getSkinAuthor();
-		char *author = stringUtility::formatString("Skin Author: %s", skinAutthor);
-		mInfoItems->add(author);
-		free(skinAutthor);
-
-		if (drawing::imageExists("installer-logo") == false)
-		{
-			utils::dataContainer* installerLogoData = settingsManager::getInstallerLogoData();
-			if (installerLogoData->data[0] == 'I' && installerLogoData->data[1] == 'M')
-			{
-				int width = (uint8_t)installerLogoData->data[2];
-				int height = (uint8_t)installerLogoData->data[3];
-				drawing::addImage("installer-logo", (uint8_t*)(installerLogoData->data + 4), D3DFMT_A8B8G8R8, width, height);
-			}
-			delete(installerLogoData);
-		}
 	}
 }
 
@@ -219,12 +183,6 @@ void systemInfoScene::render()
 	{
 		uint32_t yPos = (context::getBufferHeight() - ((itemCount * 40) - 10)) / 2;
 		yPos += theme::getCenterOffset();
-
-		if (mSystemInfoCategory == systemInfoCategoryAbout && drawing::imageExists("installer-logo") == true)
-		{
-			yPos += 32;
-			drawing::drawImage("installer-logo", theme::getInstallerTint(), 271, yPos - 64, 178, 46);
-		}
 
 		for (int32_t i = 0; i < itemCount; i++)
 		{

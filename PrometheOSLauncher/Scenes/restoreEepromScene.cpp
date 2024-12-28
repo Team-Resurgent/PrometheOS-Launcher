@@ -1,7 +1,5 @@
 #include "restoreEepromScene.h"
 #include "sceneManager.h"
-#include "audioSettingsScene.h"
-#include "videoSettingsScene.h"
 #include "mainScene.h"
 
 #include "..\context.h"
@@ -9,13 +7,10 @@
 #include "..\component.h"
 #include "..\ssfn.h"
 #include "..\inputManager.h"
-#include "..\settingsManager.h"
-#include "..\hdmiDevice.h"
 #include "..\stringUtility.h"
 #include "..\driveManager.h"
 #include "..\fileSystem.h"
 #include "..\pointerVector.h"
-#include "..\settingsManager.h"
 #include "..\theme.h"
 #include "..\XKUtils\XKEEPROM.h"
 

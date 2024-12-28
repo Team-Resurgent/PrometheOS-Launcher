@@ -68,10 +68,7 @@ public:
 	static char* getXboxVersionString();
 	static char* getAvPackString();
 	static char* getEncoderString();
-	static char* getHdModString();
-	static bool getHasRtcExpansion();
 	static double getCPUFreq();
-	static void autoFix();
 private:
 	static double RDTSC();
 };

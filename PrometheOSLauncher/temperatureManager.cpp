@@ -31,7 +31,7 @@ void temperatureManager::init()
 	mCurrentFanSpeed = mSystemFanSpeed;
 	mLastTemp = max(getCpuTemp(), getMbTemp());
 	mCpuFreq = xboxConfig::getCPUFreq();
-	mMinFanSpeed = max(mCpuFreq > 760 ? 30 : 10, (settingsManager::getMinFanSpeed() / 2));
+	mMinFanSpeed = mCpuFreq > 760 ? 30 : 10;
 }
 
 int32_t temperatureManager::getCpuTemp()
@@ -96,7 +96,7 @@ void temperatureManager::refresh()
 	}
 	mCounter = 0;
 
-	mMinFanSpeed = max(mCpuFreq > 760 ? 30 : 10, (settingsManager::getMinFanSpeed() / 2));
+	mMinFanSpeed = mCpuFreq > 760 ? 30 : 10;
 
 	int32_t temp = max(getCpuTemp(), getMbTemp());
 	float targetTempFloor = mTargetTemp - 0.75f;

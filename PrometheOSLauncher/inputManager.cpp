@@ -1,5 +1,4 @@
 #include "inputManager.h"
-#include "audioPlayer.h"
 #include "stringUtility.h"
 
 namespace
@@ -278,82 +277,66 @@ bool inputManager::buttonPressed(JoystickButton button, int port)
 
 		if (button == ButtonA && mControllerStatesCurrent[i].buttonA == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonA == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-a.ogg", false);
 			return true;
 		}
 		else if (button == ButtonB && mControllerStatesCurrent[i].buttonB == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonB == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonX && mControllerStatesCurrent[i].buttonX == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonX == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-x.ogg", false);
 			return true;
 		}
 		else if (button == ButtonY && mControllerStatesCurrent[i].buttonY == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonY == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonWhite && mControllerStatesCurrent[i].buttonWhite == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonWhite == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonBlack && mControllerStatesCurrent[i].buttonBlack == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonBlack == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonBack && mControllerStatesCurrent[i].buttonBack == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonBack == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-back.ogg", false);
 			return true;
 		}
 		else if (button == ButtonStart && mControllerStatesCurrent[i].buttonStart == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonStart == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonLeftThumb && mControllerStatesCurrent[i].buttonLeftThumb == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonLeftThumb == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonRightThumb && mControllerStatesCurrent[i].buttonRightThumb == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonRightThumb == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonDpadUp && mControllerStatesCurrent[i].buttonDpadUp == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonDpadUp == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-up.ogg", false);
 			return true;
 		}
 		else if (button == ButtonDpadRight && mControllerStatesCurrent[i].buttonDpadRight == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonDpadRight == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonDpadDown && mControllerStatesCurrent[i].buttonDpadDown == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonDpadDown == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-down.ogg", false);
 			return true;
 		}
 		else if (button == ButtonDpadLeft && mControllerStatesCurrent[i].buttonDpadLeft == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonDpadLeft == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonTriggerLeft && mControllerStatesCurrent[i].buttonTriggerLeft == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonTriggerLeft == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 		else if (button == ButtonTriggerRight && mControllerStatesCurrent[i].buttonTriggerRight == JoystickButtonStatePressed && mControllerStatesPrevious[i].buttonTriggerRight == JoystickButtonStateNone)
 		{
-			audioPlayer::play("button-other.ogg", false);
 			return true;
 		}
 	}
