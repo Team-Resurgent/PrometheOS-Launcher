@@ -9,10 +9,10 @@ Global
 		Release-Launcher = Release-Launcher
 	EndGlobalSection
 	GlobalSection(ProjectConfiguration) = postSolution
-		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Debug-Launcher.ActiveCfg = Debug-Launcher|Xbox
-		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Debug-Launcher.Build.0 = Debug-Launcher|Xbox
-		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Release-Launcher.ActiveCfg = Release-Launcher|Xbox
-		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Release-Launcher.Build.0 = Release-Launcher|Xbox
+		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Debug-Launcher.ActiveCfg = Debug-Tools|Xbox
+		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Debug-Launcher.Build.0 = Debug-Tools|Xbox
+		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Release-Launcher.ActiveCfg = Release-Tools|Xbox
+		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Release-Launcher.Build.0 = Release-Tools|Xbox
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection
