@@ -69,6 +69,7 @@ public:
 	static char* getAvPackString();
 	static char* getEncoderString();
 	static double getCPUFreq();
+	static bool launchXbe(const char* path);
 private:
 	static double RDTSC();
 };

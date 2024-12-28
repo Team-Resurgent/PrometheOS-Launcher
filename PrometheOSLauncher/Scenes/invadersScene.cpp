@@ -287,11 +287,7 @@ void invadersScene::render()
 		drawing::drawNinePatch("panel-fill", theme::getInvadersBossColor(), bossPosX, bossPosY, 20, 10);
 	}
 
-#ifndef TOOLS
-	char* score = stringUtility::formatString("Hi-Score: %i, Score: %i", settingsManager::getInvadersHiScore(), mPlayerScore);
-#else
 	char* score = stringUtility::formatString("Score: %i", mPlayerScore);
-#endif
 
 	if (mIsGameOver == true)
 	{

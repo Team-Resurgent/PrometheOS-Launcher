@@ -178,11 +178,7 @@ void snakeScene::render()
         } 
     } 
 
-#ifndef TOOLS
-	char* score = stringUtility::formatString("Hi-Score: %i, Score: %i", settingsManager::getSnakeHiScore(), mPlayerScore);
-#else
 	char* score = stringUtility::formatString("Score: %i", mPlayerScore);
-#endif
 
 	if (mIsGameOver == true)
 	{

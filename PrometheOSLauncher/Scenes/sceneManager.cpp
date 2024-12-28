@@ -5,9 +5,9 @@
 #include "backupEepromScene.h"
 #include "restoreEepromFlowScene.h"
 #include "menuScene.h"
+#include "launchScene.h"
 #include "snakeScene.h"
 #include "invadersScene.h"
-#include "launcherFlowScene.h"
 #include "dlcSignerScene.h"
 
 #include "..\xboxConfig.h"
@@ -79,6 +79,11 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select System Info option...", "", sceneItems), "System Info");
 		addScene(container);
 	}
+	else if (sceneItem == sceneItemLaunchScene)
+	{
+		sceneContainer* container = new sceneContainer(sceneItem, new launchScene(), "Launch Application");
+		addScene(container);
+	}
 	else if (sceneItem == sceneItemSystemInfoSceneConsole)
 	{
 		sceneContainer* container = new sceneContainer(sceneItem, new systemInfoScene(systemInfoCategoryConsole), "Console Info");
@@ -130,11 +135,6 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 		sceneItems->add(new utils::intContainer(sceneItemSkinSelectionScene));
 		sceneItems->add(new utils::intContainer(sceneItemSoundPackSelectionScene));
 		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select PrometheOS Theme option...", "", sceneItems), "PrometheOS Themes");
-		addScene(container);
-	}
-	else if (sceneItem == sceneItemLauncherFlowScene)
-	{
-		sceneContainer* container = new sceneContainer(sceneItem, new launcherFlowScene(), "Launch XBE");
 		addScene(container);
 	}
 	else if (sceneItem == sceneItemDlcSignerScene)

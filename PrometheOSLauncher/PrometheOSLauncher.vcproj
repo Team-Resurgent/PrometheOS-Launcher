@@ -12,7 +12,7 @@
 	</Platforms>
 	<Configurations>
 		<Configuration
-			Name="Debug-Tools|Xbox"
+			Name="Debug-Launcher|Xbox"
 			OutputDirectory="$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
@@ -73,7 +73,7 @@
 				XBEVersion="1"/>
 		</Configuration>
 		<Configuration
-			Name="Release-Tools|Xbox"
+			Name="Release-Launcher|Xbox"
 			OutputDirectory="$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
@@ -248,7 +248,7 @@
 					RelativePath=".\Scenes\invadersScene.cpp">
 				</File>
 				<File
-					RelativePath=".\Scenes\launcherFlowScene.cpp">
+					RelativePath=".\Scenes\launchScene.cpp">
 				</File>
 				<File
 					RelativePath=".\Scenes\mainScene.cpp">
@@ -527,7 +527,7 @@
 					RelativePath=".\Scenes\invadersScene.h">
 				</File>
 				<File
-					RelativePath=".\Scenes\launcherFlowScene.h">
+					RelativePath=".\Scenes\launchScene.h">
 				</File>
 				<File
 					RelativePath=".\Scenes\mainScene.h">

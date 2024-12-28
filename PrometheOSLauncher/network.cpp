@@ -3,7 +3,6 @@
 #include "socketUtility.h"
 #include "ftpServer.h"
 #include "httpServer.h"
-#include "settingsManager.h"
 #include "xboxInternals.h"
 
 void network::init()

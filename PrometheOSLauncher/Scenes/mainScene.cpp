@@ -27,10 +27,9 @@ void mainScene::update()
 
 	if (inputManager::buttonPressed(ButtonA))
 	{
-
 		if (mSelectedControl == 0) 
 		{
-			sceneManager::pushScene(sceneItemLauncherFlowScene);
+			sceneManager::pushScene(sceneItemLaunchScene);
 			return;
 		}
 		else if (mSelectedControl == 1) 
@@ -70,13 +69,12 @@ void mainScene::update()
 void mainScene::render()
 {
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
-#ifndef TOOLS
-	drawing::drawBitmapStringAligned(context::getBitmapFontLarge(), "\xC2\xA7\xC2\xA8\xC2\xA9\xC2\xAA\xC2\xAB\xC2\xAC\xC2\xAD\xC2\xAB\xC2\xA9\xC2\xAE", theme::getPrometheosColor(), theme::getPrometheosAlign(), 40, theme::getPrometheosY(), 640);
-#else
-	drawing::drawBitmapStringAligned(context::getBitmapFontLarge(), "\xC2\xA7\xC2\xA8\xC2\xA9\xC2\xAA\xC2\xAB\xC2\xAC\xC2\xAD\xC2\xAB\xC2\xA9\xC2\xAE \xC2\xAC\xC2\xA9\xC2\xA9\xC2\xB4\xC2\xAE", theme::getPrometheosColor(), theme::getPrometheosAlign(), 40, theme::getPrometheosY(), 640);
-#endif
 
-	int32_t yPos = (context::getBufferHeight() - (3 * 40) - 10) / 2;
+	drawing::drawBitmapStringAligned(context::getBitmapFontLarge(), "PROMETHEOS LAUNCHER", theme::getPrometheosColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+
+	//drawing::drawBitmapStringAligned(context::getBitmapFontLarge(), "\xC2\xA7\xC2\xA8\xC2\xA9\xC2\xAA\xC2\xAB\xC2\xAC\xC2\xAD\xC2\xAB\xC2\xA9\xC2\xAE \xC2\xAC\xC2\xA9\xC2\xA9\xC2\xB4\xC2\xAE", theme::getPrometheosColor(), theme::getPrometheosAlign(), 40, theme::getPrometheosY(), 640);
+
+	int32_t yPos = (context::getBufferHeight() - (4 * 40) - 10) / 2;
 	yPos += theme::getCenterOffset();
 
 	component::button(mSelectedControl == 0, false, "Launch Application", 193, yPos, 322, 30);

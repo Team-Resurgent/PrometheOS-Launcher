@@ -1,7 +1,6 @@
 #include "temperatureManager.h"
 #include "utils.h"
 #include "xboxInternals.h"
-#include "settingsManager.h"
 #include "xboxConfig.h"
 
 namespace

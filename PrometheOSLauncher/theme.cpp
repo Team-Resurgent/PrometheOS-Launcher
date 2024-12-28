@@ -5,7 +5,6 @@
 #include "alignment.h"
 #include "pointerVector.h"
 #include "utils.h"
-#include "audioPlayer.h"
 #include "timeUtility.h"
 
 #include <time.h>

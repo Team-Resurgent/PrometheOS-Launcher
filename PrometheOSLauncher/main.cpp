@@ -49,12 +49,6 @@ utils::dataContainer* onGetCallback(const char* path, const char* query)
 {
 	utils::dataContainer* body = NULL;
 
-#ifdef TOOLS
-	bool isTools = true;
-#else
-	bool isTools = false;
-#endif
-
 	if (stringUtility::equals(path, "\\", true))
 	{
 		return httpServer::redirect();
@@ -461,11 +455,7 @@ void readSetting(uint8_t command, uint8_t* value)
 
 void __cdecl main()
 {
-#ifndef TOOLS
-	utils::debugPrint("Welcome to PrometheOS\n");
-#else
-	utils::debugPrint("Welcome to PrometheOS Tools\n");
-#endif
+	utils::debugPrint("Welcome to PrometheOS Launcher\n");
 
 	utils::setLedStates(SMC_LED_STATES_GREEN_STATE0 | SMC_LED_STATES_GREEN_STATE1 | SMC_LED_STATES_GREEN_STATE2 | SMC_LED_STATES_GREEN_STATE3);
 
