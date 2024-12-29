@@ -9,6 +9,9 @@
 #include "snakeScene.h"
 #include "invadersScene.h"
 #include "dlcSignerScene.h"
+#include "videoSettingsScene.h"
+#include "audioSettingsScene.h"
+#include "regionSettingsScene.h"
 
 #include "..\xboxConfig.h"
 #include "..\context.h"
@@ -39,6 +42,9 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 	{
 		pointerVector<utils::intContainer*>* sceneItems = new pointerVector<utils::intContainer*>(true);
 		sceneItems->add(new utils::intContainer(sceneItemSystemInfoScene));
+		sceneItems->add(new utils::intContainer(sceneItemVideoSettingsScene));
+		sceneItems->add(new utils::intContainer(sceneItemAudioSettingsScene));
+		sceneItems->add(new utils::intContainer(sceneItemRegionSettingsScene));
 		sceneItems->add(new utils::intContainer(sceneItemUtilitiesScene));
 		sceneItems->add(new utils::intContainer(sceneItemGamesScene));
 		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select System option...", "", sceneItems), "System Settings");
@@ -129,17 +135,24 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 		sceneContainer* container = new sceneContainer(sceneItem, new invadersScene(), "Invaders");
 		addScene(container);
 	}
-	else if (sceneItem == sceneItemPrometheOsThemesScene)
-	{
-		pointerVector<utils::intContainer*>* sceneItems = new pointerVector<utils::intContainer*>(true);
-		sceneItems->add(new utils::intContainer(sceneItemSkinSelectionScene));
-		sceneItems->add(new utils::intContainer(sceneItemSoundPackSelectionScene));
-		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select PrometheOS Theme option...", "", sceneItems), "PrometheOS Themes");
-		addScene(container);
-	}
 	else if (sceneItem == sceneItemDlcSignerScene)
 	{
 		sceneContainer* container = new sceneContainer(sceneItem, new dlcSignerScene(), "DLC / Update Signer");
+		addScene(container);
+	}
+	else if (sceneItem == sceneItemVideoSettingsScene)
+	{
+		sceneContainer* container = new sceneContainer(sceneItem, new videoSettingsScene(), "Video Settings");
+		addScene(container);
+	}
+	else if (sceneItem == sceneItemAudioSettingsScene)
+	{
+		sceneContainer* container = new sceneContainer(sceneItem, new audioSettingsScene(), "Audio Settings");
+		addScene(container);
+	}
+	else if (sceneItem == sceneItemRegionSettingsScene)
+	{
+		sceneContainer* container = new sceneContainer(sceneItem, new regionSettingsScene(), "Region Settings");
 		addScene(container);
 	}
 }

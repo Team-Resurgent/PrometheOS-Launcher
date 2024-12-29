@@ -236,6 +236,9 @@
 				Name="Scenes"
 				Filter="">
 				<File
+					RelativePath=".\Scenes\audioSettingsScene.cpp">
+				</File>
+				<File
 					RelativePath=".\Scenes\backupEepromScene.cpp">
 				</File>
 				<File
@@ -257,6 +260,9 @@
 					RelativePath=".\Scenes\menuScene.cpp">
 				</File>
 				<File
+					RelativePath=".\Scenes\regionSettingsScene.cpp">
+				</File>
+				<File
 					RelativePath=".\Scenes\restoreEepromFlowScene.cpp">
 				</File>
 				<File
@@ -270,6 +276,9 @@
 				</File>
 				<File
 					RelativePath=".\Scenes\systemInfoScene.cpp">
+				</File>
+				<File
+					RelativePath=".\Scenes\videoSettingsScene.cpp">
 				</File>
 			</Filter>
 			<Filter
@@ -515,6 +524,9 @@
 				Name="Scenes"
 				Filter="">
 				<File
+					RelativePath=".\Scenes\audioSettingsScene.h">
+				</File>
+				<File
 					RelativePath=".\Scenes\backupEepromScene.h">
 				</File>
 				<File
@@ -536,6 +548,9 @@
 					RelativePath=".\Scenes\menuScene.h">
 				</File>
 				<File
+					RelativePath=".\Scenes\regionSettingsScene.h">
+				</File>
+				<File
 					RelativePath=".\Scenes\restoreEepromFlowScene.h">
 				</File>
 				<File
@@ -552,6 +567,9 @@
 				</File>
 				<File
 					RelativePath=".\Scenes\systemInfoScene.h">
+				</File>
+				<File
+					RelativePath=".\Scenes\videoSettingsScene.h">
 				</File>
 			</Filter>
 			<Filter

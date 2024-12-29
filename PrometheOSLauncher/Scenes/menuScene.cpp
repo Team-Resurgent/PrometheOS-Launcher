@@ -221,6 +221,18 @@ void menuScene::render()
 			{
 				menuText = strdup("DLC / Update Signer");
 			}
+			else if (sceneItem == sceneItemVideoSettingsScene)
+			{
+				menuText = strdup("Video");
+			}
+			else if (sceneItem == sceneItemAudioSettingsScene)
+			{
+				menuText = strdup("Audio");
+			}
+			else if (sceneItem == sceneItemRegionSettingsScene)
+			{
+				menuText = strdup("Region");
+			}
 			else
 			{
 				menuText = strdup("");
