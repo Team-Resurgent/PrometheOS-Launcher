@@ -38,27 +38,27 @@ void launchScene::update()
 	{
 		if (mSelectedControl == 0) 
 		{
-			xboxConfig::launchXbe("E:\\UDATA\\58434154\\XCAT.xbe");
+			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\XCAT.xbe");
 			return;
 		}
 		else if (mSelectedControl == 1) 
 		{
-			xboxConfig::launchXbe("E:\\UDATA\\58434154\\Insignia.xbe");
+			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\Insignia.xbe");
 			return;
 		}
 		else if (mSelectedControl == 2) 
 		{
-			xboxConfig::launchXbe("E:\\UDATA\\58434154\\MemCheck.xbe");
+			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\MemCheck.xbe");
 			return;
 		}
 		else if (mSelectedControl == 3) 
 		{
-			xboxConfig::launchXbe("E:\\UDATA\58434154\\Gamepad.xbe");
+			xboxConfig::launchXbe("HDD0-E:\\UDATA\58434154\\Gamepad.xbe");
 			return;
 		}
 		else if (mSelectedControl == 4) 
 		{
-			xboxConfig::launchXbe("E:\\UDATA\\58434154\\R5Softmod.xbe");
+			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\R5Softmod.xbe");
 			return;
 		}
 	}

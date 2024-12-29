@@ -70,7 +70,6 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 	{
 		pointerVector<utils::intContainer*>* sceneItems = new pointerVector<utils::intContainer*>(true);
 		sceneItems->add(new utils::intContainer(sceneItemBackupEepromScene));
-		sceneItems->add(new utils::intContainer(sceneItemRestoreEepromScene));
 		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select EEPROM option...", "", sceneItems), "EEPROM Selection");
 		addScene(container);
 	}
@@ -118,11 +117,6 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 	else if (sceneItem == sceneItemBackupEepromScene)
 	{
 		sceneContainer* container = new sceneContainer(sceneItem, new backupEepromScene(), "Backup EEPROM");
-		addScene(container);
-	}
-	else if (sceneItem == sceneItemRestoreEepromScene)
-	{
-		sceneContainer* container = new sceneContainer(sceneItem, new restoreEepromFlowScene(), "Restore EEPROM");
 		addScene(container);
 	}
 	else if (sceneItem == sceneItemSnakeScene)

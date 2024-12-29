@@ -137,10 +137,6 @@ void menuScene::render()
 			{
 				menuText = strdup("Backup EEPROM");
 			}
-			else if (sceneItem == sceneItemRestoreEepromScene)
-			{
-				menuText = strdup("Restore EEPROM");
-			}
 			else if (sceneItem == sceneItemPrometheOsSettingsScene)
 			{
 				menuText = strdup("PrometheOS");
