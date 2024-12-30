@@ -53,7 +53,7 @@ void launchScene::update()
 		}
 		else if (mSelectedControl == 3) 
 		{
-			xboxConfig::launchXbe("HDD0-E:\\UDATA\58434154\\Gamepad.xbe");
+			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\Gamepad.xbe");
 			return;
 		}
 		else if (mSelectedControl == 4) 
