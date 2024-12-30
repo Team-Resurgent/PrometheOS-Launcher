@@ -148,9 +148,6 @@
 				RelativePath=".\context.cpp">
 			</File>
 			<File
-				RelativePath=".\crc32.cpp">
-			</File>
-			<File
 				RelativePath=".\drawing.cpp">
 			</File>
 			<File
@@ -299,9 +296,6 @@
 			</File>
 			<File
 				RelativePath=".\context.h">
-			</File>
-			<File
-				RelativePath=".\crc32.h">
 			</File>
 			<File
 				RelativePath=".\drawing.h">

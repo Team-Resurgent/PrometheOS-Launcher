@@ -2,7 +2,6 @@
 #include "socketUtility.h"
 #include "fileSystem.h"
 #include "driveManager.h"
-#include "crc32.h"
 #include <algorithm>
 #include <string>
 #include "stringUtility.h"
@@ -924,33 +923,6 @@ bool WINAPI ftpServer::connectionThread(uint64_t sCmd)
 				else 
 				{
 					sprintf(szOutput, "550 \"%s\": Unable to remove directory.\r\n", newVirtual);
-					socketSendString(sCmd, szOutput);
-				}
-				free(ftpPath);
-				free(newVirtual);
-			}
-		}
-
-		else if (!stricmp(szCmd, "XCRC")) {
-			if (!*pszParam) {
-				socketSendString(sCmd, "501 Syntax error in parameters or arguments.\r\n");
-			} else if (!isLoggedIn) {
-				socketSendString(sCmd, "530 Not logged in.\r\n");
-			} else {
-				char* newVirtual = resolveRelative(currentVirtual, pszParam);
-				char* ftpPath = driveManager::mapFtpPath(newVirtual);
-
-				uint32_t fileHandle;
-				if (fileSystem::fileOpen(ftpPath, fileSystem::FileModeRead, fileHandle) == true)
-				{
-					unsigned long checksum = crc32::calculate(fileHandle);
-					sprintf(szOutput, "250 %08X\r\n", checksum);
-					socketSendString(sCmd, szOutput);
-					fileSystem::fileClose(fileHandle);
-				}
-				else
-				{
-					sprintf(szOutput, "550 \"%s\": File not found.\r\n", newVirtual);
 					socketSendString(sCmd, szOutput);
 				}
 				free(ftpPath);
