@@ -3,7 +3,6 @@
 #include "mainScene.h"
 #include "systemInfoScene.h"
 #include "backupEepromScene.h"
-#include "restoreEepromFlowScene.h"
 #include "menuScene.h"
 #include "launchScene.h"
 #include "snakeScene.h"

@@ -263,12 +263,6 @@
 					RelativePath=".\Scenes\regionSettingsScene.cpp">
 				</File>
 				<File
-					RelativePath=".\Scenes\restoreEepromFlowScene.cpp">
-				</File>
-				<File
-					RelativePath=".\Scenes\restoreEepromScene.cpp">
-				</File>
-				<File
 					RelativePath=".\Scenes\sceneManager.cpp">
 				</File>
 				<File
@@ -379,9 +373,6 @@
 				RelativePath=".\stb_image_write.h">
 			</File>
 			<File
-				RelativePath=".\stb_vorbis.cpp">
-			</File>
-			<File
 				RelativePath=".\stdafx.h">
 			</File>
 			<File
@@ -421,22 +412,10 @@
 						RelativePath=".\Assets\Web\bootstrap_css.h">
 					</File>
 					<File
-						RelativePath=".\Assets\Web\cerbiosini_html.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\cerbiosini_js.h">
-					</File>
-					<File
 						RelativePath=".\Assets\Web\download_html.h">
 					</File>
 					<File
 						RelativePath=".\Assets\Web\download_js.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\downloads_html.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\downloads_js.h">
 					</File>
 					<File
 						RelativePath=".\Assets\Web\downloads_tools_html.h">
@@ -448,28 +427,10 @@
 						RelativePath=".\Assets\Web\favicon_ico.h">
 					</File>
 					<File
-						RelativePath=".\Assets\Web\flash_html.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\flash_js.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\index_html.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\index_js.h">
-					</File>
-					<File
 						RelativePath=".\Assets\Web\index_tools_html.h">
 					</File>
 					<File
 						RelativePath=".\Assets\Web\index_tools_js.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\launch_html.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\launch_js.h">
 					</File>
 					<File
 						RelativePath=".\Assets\Web\main_css.h">
@@ -479,12 +440,6 @@
 					</File>
 					<File
 						RelativePath=".\Assets\Web\remoteview_js.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\remove_html.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\remove_js.h">
 					</File>
 				</Filter>
 				<Filter
@@ -549,12 +504,6 @@
 				</File>
 				<File
 					RelativePath=".\Scenes\regionSettingsScene.h">
-				</File>
-				<File
-					RelativePath=".\Scenes\restoreEepromFlowScene.h">
-				</File>
-				<File
-					RelativePath=".\Scenes\restoreEepromScene.h">
 				</File>
 				<File
 					RelativePath=".\Scenes\scene.h">
