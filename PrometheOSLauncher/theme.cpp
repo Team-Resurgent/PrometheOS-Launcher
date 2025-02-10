@@ -6,6 +6,7 @@
 #include "pointerVector.h"
 #include "utils.h"
 #include "timeUtility.h"
+#include "resources.h"
 
 #include <time.h>
 
@@ -13,11 +14,6 @@ namespace
 {
 	theme::ThemeData mThemeData;
 	uint32_t mBackgroundFrameCount = 0;
-}
-
-char* theme::getSkinAuthor()
-{
-	return strdup(&mThemeData.SKIN_AUTHOR[0]);
 }
 
 uint32_t theme::getBackgroundFrameCount()
@@ -296,210 +292,8 @@ uint32_t theme::getTextPanelHoverTextColor()
 	return mThemeData.TEXT_PANEL_HOVER_TEXT_COLOR;
 }
 
-uint32_t theme::getButtonLedOffFillColor()
-{ 
-	return mThemeData.BUTTON_LED_OFF_FILL_COLOR;
-}
-uint32_t theme::getButtonLedOffStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_OFF_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedOffTextColor()
-{ 
-	return mThemeData.BUTTON_LED_OFF_TEXT_COLOR;
-}
-uint32_t theme::getButtonLedOffHoverFillColor()
-{ 
-	return mThemeData.BUTTON_LED_OFF_HOVER_FILL_COLOR;
-}
-uint32_t theme::getButtonLedOffHoverStrokeColor()
-{
-	return mThemeData.BUTTON_LED_OFF_HOVER_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedOffHoverTextColor()
-{ 
-	return mThemeData.BUTTON_LED_OFF_HOVER_TEXT_COLOR;
-}
-
-uint32_t theme::getButtonLedRedFillColor()
-{ 
-	return mThemeData.BUTTON_LED_RED_FILL_COLOR;
-}
-uint32_t theme::getButtonLedRedStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_RED_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedRedTextColor()
-{ 
-	return mThemeData.BUTTON_LED_RED_TEXT_COLOR;
-}
-uint32_t theme::getButtonLedRedHoverFillColor()
-{ 
-	return mThemeData.BUTTON_LED_RED_HOVER_FILL_COLOR;
-}
-uint32_t theme::getButtonLedRedHoverStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_RED_HOVER_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedRedHoverTextColor()
-{ 
-	return mThemeData.BUTTON_LED_RED_HOVER_TEXT_COLOR;
-}
-
-uint32_t theme::getButtonLedGreenFillColor()
-{ 
-	return mThemeData.BUTTON_LED_GREEN_FILL_COLOR;
-}
-uint32_t theme::getButtonLedGreenStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_GREEN_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedGreenTextColor()
-{ 
-	return mThemeData.BUTTON_LED_GREEN_TEXT_COLOR;
-}
-uint32_t theme::getButtonLedGreenHoverFillColor()
-{ 
-	return mThemeData.BUTTON_LED_GREEN_HOVER_FILL_COLOR;
-}
-uint32_t theme::getButtonLedGreenHoverStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_GREEN_HOVER_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedGreenHoverTextColor()
-{ 
-	return mThemeData.BUTTON_LED_GREEN_HOVER_TEXT_COLOR;
-}
-
-uint32_t theme::getButtonLedYellowFillColor()
-{ 
-	return mThemeData.BUTTON_LED_YELLOW_FILL_COLOR;
-}
-uint32_t theme::getButtonLedYellowStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_YELLOW_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedYellowTextColor()
-{ 
-	return mThemeData.BUTTON_LED_YELLOW_TEXT_COLOR;
-}
-uint32_t theme::getButtonLedYellowHoverFillColor()
-{ 
-	return mThemeData.BUTTON_LED_YELLOW_HOVER_FILL_COLOR;
-}
-uint32_t theme::getButtonLedYellowHoverStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_YELLOW_HOVER_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedYellowHoverTextColor()
-{ 
-	return mThemeData.BUTTON_LED_YELLOW_HOVER_TEXT_COLOR;
-}
-
-uint32_t theme::getButtonLedBlueFillColor()
-{ 
-	return mThemeData.BUTTON_LED_BLUE_FILL_COLOR;
-}
-uint32_t theme::getButtonLedBlueStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_BLUE_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedBlueTextColor()
-{ 
-	return mThemeData.BUTTON_LED_BLUE_TEXT_COLOR;
-}
-uint32_t theme::getButtonLedBlueHoverFillColor()
-{ 
-	return mThemeData.BUTTON_LED_BLUE_HOVER_FILL_COLOR;
-}
-uint32_t theme::getButtonLedBlueHoverStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_BLUE_HOVER_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedBlueHoverTextColor()
-{ 
-	return mThemeData.BUTTON_LED_BLUE_HOVER_TEXT_COLOR;
-}
-
-uint32_t theme::getButtonLedPurpleFillColor()
-{ 
-	return mThemeData.BUTTON_LED_PURPLE_FILL_COLOR;
-}
-uint32_t theme::getButtonLedPurpleStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_PURPLE_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedPurpleTextColor()
-{ 
-	return mThemeData.BUTTON_LED_PURPLE_TEXT_COLOR;
-}
-uint32_t theme::getButtonLedPurpleHoverFillColor()
-{ 
-	return mThemeData.BUTTON_LED_PURPLE_HOVER_FILL_COLOR;
-}
-uint32_t theme::getButtonLedPurpleHoverStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_PURPLE_HOVER_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedPurpleHoverTextColor()
-{ 
-	return mThemeData.BUTTON_LED_PURPLE_HOVER_TEXT_COLOR;
-}
-
-uint32_t theme::getButtonLedTurquoiseFillColor()
-{ 
-	return mThemeData.BUTTON_LED_TURQUOISE_FILL_COLOR;
-}
-uint32_t theme::getButtonLedTurquoiseStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_TURQUOISE_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedTurquoiseTextColor()
-{ 
-	return mThemeData.BUTTON_LED_TURQUOISE_TEXT_COLOR;
-}
-uint32_t theme::getButtonLedTurquoiseHoverFillColor()
-{ 
-	return mThemeData.BUTTON_LED_TURQUOISE_HOVER_FILL_COLOR;
-}
-uint32_t theme::getButtonLedTurquoiseHoverStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_TURQUOISE_HOVER_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedTurquoiseHoverTextColor()
-{ 
-	return mThemeData.BUTTON_LED_TURQUOISE_HOVER_TEXT_COLOR;
-}
-
-uint32_t theme::getButtonLedWhiteFillColor()
-{ 
-	return mThemeData.BUTTON_LED_WHITE_FILL_COLOR;
-}
-uint32_t theme::getButtonLedWhiteStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_WHITE_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedWhiteTextColor()
-{ 
-	return mThemeData.BUTTON_LED_WHITE_TEXT_COLOR;
-}
-uint32_t theme::getButtonLedWhiteHoverFillColor()
-{ 
-	return mThemeData.BUTTON_LED_WHITE_HOVER_FILL_COLOR;
-}
-uint32_t theme::getButtonLedWhiteHoverStrokeColor()
-{ 
-	return mThemeData.BUTTON_LED_WHITE_HOVER_STROKE_COLOR;
-}
-uint32_t theme::getButtonLedWhiteHoverTextColor()
-{ 
-	return mThemeData.BUTTON_LED_WHITE_HOVER_TEXT_COLOR;
-}
-
 void theme::loadSkin()
 {
-	memset(&mThemeData.SKIN_AUTHOR[0], 0, sizeof(mThemeData.SKIN_AUTHOR));
-
 	mThemeData.BACKGROUND_OVERLAY_AS_UNDERLAY = THEME_BACKGROUND_OVERLAY_AS_UNDERLAY;
 	mThemeData.BACKGROUND_FRAME_DELAY = THEME_BACKGROUND_FRAME_DELAY;
 	mThemeData.BACKGROUND_FRAME_PINGPONG = THEME_BACKGROUND_FRAME_PINGPONG;
@@ -563,59 +357,5 @@ void theme::loadSkin()
 	mThemeData.TEXT_PANEL_HOVER_STROKE_COLOR = THEME_TEXT_PANEL_HOVER_STROKE_COLOR;
 	mThemeData.TEXT_PANEL_HOVER_TEXT_COLOR = THEME_TEXT_PANEL_HOVER_TEXT_COLOR;
 
-	mThemeData.BUTTON_LED_OFF_FILL_COLOR = THEME_BUTTON_LED_OFF_FILL_COLOR;
-	mThemeData.BUTTON_LED_OFF_STROKE_COLOR = THEME_BUTTON_LED_OFF_STROKE_COLOR;
-	mThemeData.BUTTON_LED_OFF_TEXT_COLOR = THEME_BUTTON_LED_OFF_TEXT_COLOR;
-	mThemeData.BUTTON_LED_OFF_HOVER_FILL_COLOR = THEME_BUTTON_LED_OFF_HOVER_FILL_COLOR;
-	mThemeData.BUTTON_LED_OFF_HOVER_STROKE_COLOR = THEME_BUTTON_LED_OFF_HOVER_STROKE_COLOR;
-	mThemeData.BUTTON_LED_OFF_HOVER_TEXT_COLOR = THEME_BUTTON_LED_OFF_HOVER_TEXT_COLOR;
-
-	mThemeData.BUTTON_LED_RED_FILL_COLOR = THEME_BUTTON_LED_RED_FILL_COLOR;
-	mThemeData.BUTTON_LED_RED_STROKE_COLOR = THEME_BUTTON_LED_RED_STROKE_COLOR;
-	mThemeData.BUTTON_LED_RED_TEXT_COLOR = THEME_BUTTON_LED_RED_TEXT_COLOR;
-	mThemeData.BUTTON_LED_RED_HOVER_FILL_COLOR = THEME_BUTTON_LED_RED_HOVER_FILL_COLOR;
-	mThemeData.BUTTON_LED_RED_HOVER_STROKE_COLOR = THEME_BUTTON_LED_RED_HOVER_STROKE_COLOR;
-	mThemeData.BUTTON_LED_RED_HOVER_TEXT_COLOR = THEME_BUTTON_LED_RED_HOVER_TEXT_COLOR;
-
-	mThemeData.BUTTON_LED_GREEN_FILL_COLOR = THEME_BUTTON_LED_GREEN_FILL_COLOR;
-	mThemeData.BUTTON_LED_GREEN_STROKE_COLOR = THEME_BUTTON_LED_GREEN_STROKE_COLOR;
-	mThemeData.BUTTON_LED_GREEN_TEXT_COLOR = THEME_BUTTON_LED_GREEN_TEXT_COLOR;
-	mThemeData.BUTTON_LED_GREEN_HOVER_FILL_COLOR = THEME_BUTTON_LED_GREEN_HOVER_FILL_COLOR;
-	mThemeData.BUTTON_LED_GREEN_HOVER_STROKE_COLOR = THEME_BUTTON_LED_GREEN_HOVER_STROKE_COLOR;
-	mThemeData.BUTTON_LED_GREEN_HOVER_TEXT_COLOR = THEME_BUTTON_LED_GREEN_HOVER_TEXT_COLOR;
-
-	mThemeData.BUTTON_LED_YELLOW_FILL_COLOR = THEME_BUTTON_LED_YELLOW_FILL_COLOR;
-	mThemeData.BUTTON_LED_YELLOW_STROKE_COLOR = THEME_BUTTON_LED_YELLOW_STROKE_COLOR;
-	mThemeData.BUTTON_LED_YELLOW_TEXT_COLOR = THEME_BUTTON_LED_YELLOW_TEXT_COLOR;
-	mThemeData.BUTTON_LED_YELLOW_HOVER_FILL_COLOR = THEME_BUTTON_LED_YELLOW_HOVER_FILL_COLOR;
-	mThemeData.BUTTON_LED_YELLOW_HOVER_STROKE_COLOR = THEME_BUTTON_LED_YELLOW_HOVER_STROKE_COLOR;
-	mThemeData.BUTTON_LED_YELLOW_HOVER_TEXT_COLOR = THEME_BUTTON_LED_YELLOW_HOVER_TEXT_COLOR;
-
-	mThemeData.BUTTON_LED_BLUE_FILL_COLOR = THEME_BUTTON_LED_BLUE_FILL_COLOR;
-	mThemeData.BUTTON_LED_BLUE_STROKE_COLOR = THEME_BUTTON_LED_BLUE_STROKE_COLOR;
-	mThemeData.BUTTON_LED_BLUE_TEXT_COLOR = THEME_BUTTON_LED_BLUE_TEXT_COLOR;
-	mThemeData.BUTTON_LED_BLUE_HOVER_FILL_COLOR = THEME_BUTTON_LED_BLUE_HOVER_FILL_COLOR;
-	mThemeData.BUTTON_LED_BLUE_HOVER_STROKE_COLOR = THEME_BUTTON_LED_BLUE_HOVER_STROKE_COLOR;
-	mThemeData.BUTTON_LED_BLUE_HOVER_TEXT_COLOR = THEME_BUTTON_LED_BLUE_HOVER_TEXT_COLOR;
-
-	mThemeData.BUTTON_LED_PURPLE_FILL_COLOR = THEME_BUTTON_LED_PURPLE_FILL_COLOR;
-	mThemeData.BUTTON_LED_PURPLE_STROKE_COLOR = THEME_BUTTON_LED_PURPLE_STROKE_COLOR;
-	mThemeData.BUTTON_LED_PURPLE_TEXT_COLOR = THEME_BUTTON_LED_PURPLE_TEXT_COLOR;
-	mThemeData.BUTTON_LED_PURPLE_HOVER_FILL_COLOR = THEME_BUTTON_LED_PURPLE_HOVER_FILL_COLOR;
-	mThemeData.BUTTON_LED_PURPLE_HOVER_STROKE_COLOR = THEME_BUTTON_LED_PURPLE_HOVER_STROKE_COLOR;
-	mThemeData.BUTTON_LED_PURPLE_HOVER_TEXT_COLOR = THEME_BUTTON_LED_PURPLE_HOVER_TEXT_COLOR;
-		
-	mThemeData.BUTTON_LED_TURQUOISE_FILL_COLOR = THEME_BUTTON_LED_TURQUOISE_FILL_COLOR;
-	mThemeData.BUTTON_LED_TURQUOISE_STROKE_COLOR = THEME_BUTTON_LED_TURQUOISE_STROKE_COLOR;
-	mThemeData.BUTTON_LED_TURQUOISE_TEXT_COLOR = THEME_BUTTON_LED_TURQUOISE_TEXT_COLOR;
-	mThemeData.BUTTON_LED_TURQUOISE_HOVER_FILL_COLOR = THEME_BUTTON_LED_TURQUOISE_HOVER_FILL_COLOR;
-	mThemeData.BUTTON_LED_TURQUOISE_HOVER_STROKE_COLOR = THEME_BUTTON_LED_TURQUOISE_HOVER_STROKE_COLOR;
-	mThemeData.BUTTON_LED_TURQUOISE_HOVER_TEXT_COLOR = THEME_BUTTON_LED_TURQUOISE_HOVER_TEXT_COLOR;
-
-	mThemeData.BUTTON_LED_WHITE_FILL_COLOR = THEME_BUTTON_LED_WHITE_FILL_COLOR;
-	mThemeData.BUTTON_LED_WHITE_STROKE_COLOR = THEME_BUTTON_LED_WHITE_STROKE_COLOR;
-	mThemeData.BUTTON_LED_WHITE_TEXT_COLOR = THEME_BUTTON_LED_WHITE_TEXT_COLOR;
-	mThemeData.BUTTON_LED_WHITE_HOVER_FILL_COLOR = THEME_BUTTON_LED_WHITE_HOVER_FILL_COLOR;
-	mThemeData.BUTTON_LED_WHITE_HOVER_STROKE_COLOR = THEME_BUTTON_LED_WHITE_HOVER_STROKE_COLOR;
-	mThemeData.BUTTON_LED_WHITE_HOVER_TEXT_COLOR = THEME_BUTTON_LED_WHITE_HOVER_TEXT_COLOR;
+	drawing::loadImage((char*)background_jpg, sizeof(background_jpg), "background:0");
 }

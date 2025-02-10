@@ -399,17 +399,14 @@
 			<Filter
 				Name="Assets"
 				Filter="">
+				<File
+					RelativePath=".\Assets\background_jpg.h">
+				</File>
 				<Filter
 					Name="Web"
 					Filter="">
 					<File
 						RelativePath=".\Assets\Web\bootstrap_css.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\download_html.h">
-					</File>
-					<File
-						RelativePath=".\Assets\Web\download_js.h">
 					</File>
 					<File
 						RelativePath=".\Assets\Web\downloads_tools_html.h">

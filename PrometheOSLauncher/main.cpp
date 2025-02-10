@@ -468,6 +468,7 @@ void __cdecl main()
 	driveManager::mountDrive("HDD0-C");
 	driveManager::mountDrive("HDD0-E");
 	
+	context::setImageMap(new pointerMap<image*>(true));
 	xboxConfig::init();
 	theme::loadSkin();
 
@@ -485,7 +486,6 @@ void __cdecl main()
 		}
 	}
 
-	context::setImageMap(new pointerMap<image*>(true));
 
 	drawing::loadFont(&font_sfn[0]);
 
