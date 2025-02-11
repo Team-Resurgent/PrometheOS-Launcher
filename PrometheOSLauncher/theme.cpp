@@ -359,7 +359,7 @@ void theme::loadSkin()
 
 #ifdef PROM_MU
 	drawing::loadImage((char*)background_mu_jpg, sizeof(background_mu_jpg), "background:0");
-else
+#else
 	drawing::loadImage((char*)background_jpg, sizeof(background_jpg), "background:0");
 #endif
 }
