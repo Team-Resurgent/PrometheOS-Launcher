@@ -70,7 +70,7 @@ void mainScene::render()
 {
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
 
-	drawing::drawBitmapStringAligned(context::getBitmapFontLarge(), "PROMETHEOS LAUNCHER", theme::getPrometheosColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+	//drawing::drawBitmapStringAligned(context::getBitmapFontLarge(), "PROMETHEOS LAUNCHER", theme::getPrometheosColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
 
 	//drawing::drawBitmapStringAligned(context::getBitmapFontLarge(), "\xC2\xA7\xC2\xA8\xC2\xA9\xC2\xAA\xC2\xAB\xC2\xAC\xC2\xAD\xC2\xAB\xC2\xA9\xC2\xAE \xC2\xAC\xC2\xA9\xC2\xA9\xC2\xB4\xC2\xAE", theme::getPrometheosColor(), theme::getPrometheosAlign(), 40, theme::getPrometheosY(), 640);
 
