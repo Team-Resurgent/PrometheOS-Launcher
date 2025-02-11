@@ -146,7 +146,7 @@ void regionSettingsScene::render()
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
 	for (int i = 0; i < 3; i++)
 	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Region settings...", i == 1 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + i, theme::getHeaderY(), 640);
+		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Region settings...", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + (i == 0 ? 0 : i ^ 3), theme::getHeaderY(), 640);
 	}
 
 	int yPos = (context::getBufferHeight() - (30 + 40 + 30 + 40 + 30 + 30)) / 2;
