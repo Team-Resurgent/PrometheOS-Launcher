@@ -215,11 +215,17 @@ void filePickerScene::render()
 
 	if (mFilePickerType == filePickerTypeEeprom)
 	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Please select Eeprom to flash...", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+		for (int i = 0; i < 3; i++)
+		{
+			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Please select Eeprom to flash...", i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + i, theme::getHeaderY(), 640);
+		}
 	}
 	else if (mFilePickerType == filePickerTypeXbe)
 	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Please select XBE...", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+		for (int i = 0; i < 3; i++)
+		{
+			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Please select XBE...", i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + i, theme::getHeaderY(), 640);
+		}
 	}
 
 	if (mInitialized == false)

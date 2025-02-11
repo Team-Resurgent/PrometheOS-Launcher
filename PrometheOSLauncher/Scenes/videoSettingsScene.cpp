@@ -124,7 +124,10 @@ void videoSettingsScene::update()
 void videoSettingsScene::render()
 {
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
-	drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Video settings...", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+	for (int i = 0; i < 3; i++)
+	{
+		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Video settings...", i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + i, theme::getHeaderY(), 640);
+	}
 
 	int xPos = 117;
 	int yPos = (context::getBufferHeight() - (30 + 40 + 30 + 30)) / 2;

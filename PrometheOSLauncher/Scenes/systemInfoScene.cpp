@@ -147,25 +147,28 @@ void systemInfoScene::render()
 {
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
 
-	if (mSystemInfoCategory == systemInfoCategoryConsole)
+	for (int i = 0; i < 3; i++)
 	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Console", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
-	}
-	else if (mSystemInfoCategory == systemInfoCategoryStorage)
-	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Storage", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
-	}
-	else if (mSystemInfoCategory == systemInfoCategoryAudio)
-	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Audio", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
-	}
-	else if (mSystemInfoCategory == systemInfoCategoryVideo)
-	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Video", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
-	}
-	else if (mSystemInfoCategory == systemInfoCategoryAbout)
-	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: About", theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+		if (mSystemInfoCategory == systemInfoCategoryConsole)
+		{
+			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Console", i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+		}
+		else if (mSystemInfoCategory == systemInfoCategoryStorage)
+		{
+			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Storage", i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+		}
+		else if (mSystemInfoCategory == systemInfoCategoryAudio)
+		{
+			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Audio", i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+		}
+		else if (mSystemInfoCategory == systemInfoCategoryVideo)
+		{
+			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Video", i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+		}
+		else if (mSystemInfoCategory == systemInfoCategoryAbout)
+		{
+			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: About", i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+		}
 	}
 
 	uint32_t yPos = 96;

@@ -223,7 +223,10 @@ void invadersScene::render()
 {
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
 	char* title = stringUtility::formatString("Invaders - Level %i", mLevel + 1); 
-	drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), title, theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+	for (int i = 0; i < 3; i++)
+	{
+		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), title, i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + i, theme::getHeaderY(), 640);
+	}
 	free(title);
 
 	int xPos = (context::getBufferWidth() - ((mWidth + 2) * 10)) / 2;

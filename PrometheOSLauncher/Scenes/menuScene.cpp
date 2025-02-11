@@ -67,7 +67,10 @@ void menuScene::update()
 void menuScene::render()
 {
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
-	drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), mTitle, theme::getHeaderTextColor(), theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+	for (int i = 0; i < 3; i++)
+	{
+		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), mTitle, i == 0 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + i, theme::getHeaderY(), 640);
+	}
 
 	int32_t maxItems = 7;
 
