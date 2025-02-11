@@ -2,19 +2,23 @@ Microsoft Visual Studio Solution File, Format Version 8.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrometheOSLauncher", "PrometheOSLauncher\PrometheOSLauncher.vcproj", "{03813F8D-2AD5-44E4-B724-44240DB90B0B}"
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug-Launcher = Debug-Launcher
+		Debug-LauncherMU = Debug-LauncherMU
 		Release-Launcher = Release-Launcher
+		Release-LauncherMU = Release-LauncherMU
 	EndGlobalSection
 	GlobalSection(ProjectConfiguration) = postSolution
 		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Debug-Launcher.ActiveCfg = Debug-Launcher|Xbox
 		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Debug-Launcher.Build.0 = Debug-Launcher|Xbox
+		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Debug-LauncherMU.ActiveCfg = Debug-LauncherMU|Xbox
+		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Debug-LauncherMU.Build.0 = Debug-LauncherMU|Xbox
 		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Release-Launcher.ActiveCfg = Release-Launcher|Xbox
 		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Release-Launcher.Build.0 = Release-Launcher|Xbox
+		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Release-LauncherMU.ActiveCfg = Relase-LauncherMU|Xbox
+		{03813F8D-2AD5-44E4-B724-44240DB90B0B}.Release-LauncherMU.Build.0 = Relase-LauncherMU|Xbox
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection

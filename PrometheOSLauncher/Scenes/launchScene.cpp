@@ -48,19 +48,19 @@ void launchScene::update()
 		}
 		else if (mSelectedControl == 2) 
 		{
-			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\MemCheck.xbe");
+			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\Gamepad.xbe");
 			return;
 		}
 		else if (mSelectedControl == 3) 
 		{
-			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\Gamepad.xbe");
+			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\MemCheck.xbe");
 			return;
 		}
 		else if (mSelectedControl == 4) 
 		{
 			xboxConfig::launchXbe("HDD0-E:\\UDATA\\58434154\\R5Softmod.xbe");
 			return;
-		}
+		}	
 	}
 
 	// Down Actions
@@ -88,7 +88,7 @@ void launchScene::render()
 	int32_t yPos = (context::getBufferHeight() - (5 * 40) - 10) / 2;
 	yPos += theme::getCenterOffset();
 
-	component::button(mSelectedControl == 0, false, "Xbox Archival Tool", 193, yPos, 322, 30);
+	component::button(mSelectedControl == 0, false, "Xbox Content Archival Tool", 193, yPos, 322, 30);
 
 	yPos += 40;
 
@@ -96,15 +96,15 @@ void launchScene::render()
 
 	yPos += 40;
 
-	component::button(mSelectedControl == 2, false, "Controller Tester", 193, yPos, 322, 30);
+	component::button(mSelectedControl == 2, false, "Gamepad Tester", 193, yPos, 322, 30);
 
 	yPos += 40;
 
-	component::button(mSelectedControl == 3, false, "MemCheck", 193, yPos, 322, 30);
+	component::button(mSelectedControl == 3, false, "MemCheck Memory Tester", 193, yPos, 322, 30);
 
 	yPos += 40;
 
-	component::button(mSelectedControl == 4, false, "Rocky5's Softmod", 193, yPos, 322, 30);
+	component::button(mSelectedControl == 4, false, "Rocky5's Softmod v1.2.2", 193, yPos, 322, 30);
 
 	drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "\xC2\xA2 Back", theme::getFooterTextColor(), horizAlignmentRight, 40, theme::getFooterY(), 640);
 }

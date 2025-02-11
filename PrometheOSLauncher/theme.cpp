@@ -357,5 +357,9 @@ void theme::loadSkin()
 	mThemeData.TEXT_PANEL_HOVER_STROKE_COLOR = THEME_TEXT_PANEL_HOVER_STROKE_COLOR;
 	mThemeData.TEXT_PANEL_HOVER_TEXT_COLOR = THEME_TEXT_PANEL_HOVER_TEXT_COLOR;
 
+#ifdef PROM_MU
+	drawing::loadImage((char*)background_mu_jpg, sizeof(background_mu_jpg), "background:0");
+else
 	drawing::loadImage((char*)background_jpg, sizeof(background_jpg), "background:0");
+#endif
 }
