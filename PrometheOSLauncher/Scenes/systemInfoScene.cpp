@@ -151,23 +151,23 @@ void systemInfoScene::render()
 	{
 		if (mSystemInfoCategory == systemInfoCategoryConsole)
 		{
-			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Console", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+			drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "System Info: Console", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
 		}
 		else if (mSystemInfoCategory == systemInfoCategoryStorage)
 		{
-			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Storage", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+			drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "System Info: Storage", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
 		}
 		else if (mSystemInfoCategory == systemInfoCategoryAudio)
 		{
-			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Audio", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+			drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "System Info: Audio", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
 		}
 		else if (mSystemInfoCategory == systemInfoCategoryVideo)
 		{
-			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: Video", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+			drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "System Info: Video", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
 		}
 		else if (mSystemInfoCategory == systemInfoCategoryAbout)
 		{
-			drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "System Info: About", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
+			drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "System Info: About", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 40, theme::getHeaderY(), 640);
 		}
 	}
 

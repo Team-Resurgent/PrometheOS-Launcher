@@ -135,7 +135,9 @@ void snakeScene::render()
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
 	for (int i = 0; i < 3; i++)
 	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Snake", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + (i == 0 ? 0 : i ^ 3), theme::getHeaderY(), 640);
+		char* score = stringUtility::formatString("Snake - Score: %i", mPlayerScore);
+		drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), score, theme::getFooterTextColor(), horizAlignmentCenter, 40, theme::getFooterY(), 640);
+		free(score);
 	}
 
 	int xPos = (context::getBufferWidth() - ((mWidth + 2) * 10)) / 2;
@@ -181,8 +183,6 @@ void snakeScene::render()
         } 
     } 
 
-	char* score = stringUtility::formatString("Score: %i", mPlayerScore);
-
 	if (mIsGameOver == true)
 	{
 		int yPosGameOver = (context::getBufferHeight() - 20) / 2;
@@ -191,8 +191,6 @@ void snakeScene::render()
 		drawing::drawBitmapString(context::getBitmapFontSmall(), "\xC2\xA1 Restart", theme::getFooterTextColor(), 40, theme::getFooterY());
 	}
 
-	drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), score, theme::getFooterTextColor(), horizAlignmentCenter, 40, theme::getFooterY(), 640);
-	free(score);
 	drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "\xC2\xA2 Back", theme::getFooterTextColor(), horizAlignmentRight, 40, theme::getFooterY(), 640);
 }
 

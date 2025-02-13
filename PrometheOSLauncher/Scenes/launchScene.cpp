@@ -85,7 +85,7 @@ void launchScene::render()
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
 	for (int i = 0; i < 3; i++)
 	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), "Launch Application...", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + (i == 0 ? 0 : i ^ 3), theme::getHeaderY(), 640);
+		drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "Launch Application", i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + (i == 0 ? 0 : i ^ 3), theme::getHeaderY(), 640);
 	}
 
 	int32_t yPos = (context::getBufferHeight() - (5 * 40) - 10) / 2;

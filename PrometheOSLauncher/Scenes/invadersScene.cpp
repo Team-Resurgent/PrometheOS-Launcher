@@ -222,10 +222,10 @@ void invadersScene::update()
 void invadersScene::render()
 {
 	component::panel(theme::getPanelFillColor(), theme::getPanelStrokeColor(), 16, 16, 688, 448);
-	char* title = stringUtility::formatString("Invaders - Level %i", mLevel + 1); 
+	char* title = stringUtility::formatString("Invaders - Level %i - Score: %i", mLevel + 1, mPlayerScore); 
 	for (int i = 0; i < 3; i++)
 	{
-		drawing::drawBitmapStringAligned(context::getBitmapFontMedium(), title, i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + (i == 0 ? 0 : i ^ 3), theme::getHeaderY(), 640);
+		drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), title, i == 2 ? theme::getHeaderTextColor() : 0xff000000, theme::getHeaderAlign(), 39 + (i == 0 ? 0 : i ^ 3), theme::getHeaderY(), 640);
 	}
 	free(title);
 
@@ -290,8 +290,6 @@ void invadersScene::render()
 		drawing::drawNinePatch("panel-fill", theme::getInvadersBossColor(), bossPosX, bossPosY, 20, 10);
 	}
 
-	char* score = stringUtility::formatString("Score: %i", mPlayerScore);
-
 	if (mIsGameOver == true)
 	{
 		int yPosGameOver = (context::getBufferHeight() - 20) / 2;
@@ -300,8 +298,6 @@ void invadersScene::render()
 		drawing::drawBitmapString(context::getBitmapFontSmall(), "\xC2\xA1 Restart", theme::getFooterTextColor(), 40, theme::getFooterY());
 	}
 
-	drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), score, theme::getFooterTextColor(), horizAlignmentCenter, 40, theme::getFooterY(), 640);
-	free(score);
 	drawing::drawBitmapStringAligned(context::getBitmapFontSmall(), "\xC2\xA2 Back", theme::getFooterTextColor(), horizAlignmentRight, 40, theme::getFooterY(), 640);
 }
 
