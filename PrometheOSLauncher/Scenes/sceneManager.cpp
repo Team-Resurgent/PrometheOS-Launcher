@@ -46,7 +46,7 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 		sceneItems->add(new utils::intContainer(sceneItemRegionSettingsScene));
 		sceneItems->add(new utils::intContainer(sceneItemUtilitiesScene));
 		sceneItems->add(new utils::intContainer(sceneItemGamesScene));
-		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select System option...", "", sceneItems), "System Settings");
+		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select System Option", "", sceneItems), "System Settings");
 		addScene(container);
 	}
 	else if (sceneItem == sceneItemGamesScene)
@@ -54,7 +54,7 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 		pointerVector<utils::intContainer*>* sceneItems = new pointerVector<utils::intContainer*>(true);
 		sceneItems->add(new utils::intContainer(sceneItemSnakeScene));
 		sceneItems->add(new utils::intContainer(sceneItemInvadersScene));
-		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select Game option...", "", sceneItems), "Games");
+		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select Game Option", "", sceneItems), "Games");
 		addScene(container);
 	}
 	else if (sceneItem == sceneItemUtilitiesScene)
@@ -62,14 +62,14 @@ void sceneManager::pushScene(sceneItemEnum sceneItem)
 		pointerVector<utils::intContainer*>* sceneItems = new pointerVector<utils::intContainer*>(true);
 		sceneItems->add(new utils::intContainer(sceneItemEepromToolsScene));
 		sceneItems->add(new utils::intContainer(sceneItemDlcSignerScene));
-		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select Utility option...", "", sceneItems), "Utilities");
+		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select Utility Option", "", sceneItems), "Utilities");
 		addScene(container);
 	}
 	else if (sceneItem == sceneItemEepromToolsScene)
 	{
 		pointerVector<utils::intContainer*>* sceneItems = new pointerVector<utils::intContainer*>(true);
 		sceneItems->add(new utils::intContainer(sceneItemBackupEepromScene));
-		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select EEPROM option...", "", sceneItems), "EEPROM Selection");
+		sceneContainer* container = new sceneContainer(sceneItem, new menuScene("Select EEPROM Option", "", sceneItems), "EEPROM Selection");
 		addScene(container);
 	}
 	else if (sceneItem == sceneItemSystemInfoScene)
