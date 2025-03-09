@@ -410,14 +410,14 @@ bool WINAPI ftpServer::connectionThread(uint64_t sCmd)
 				memset(&saiData, 0, sizeof(SOCKADDR_IN));
 				saiData.sin_family = AF_INET;
 
-				unsigned char h1 = 0;
-				unsigned char h2 = 0;
-				unsigned char h3 = 0;
-				unsigned char h4 = 0;
-				unsigned char p1 = 0;
-				unsigned char p2 = 0;
+				unsigned short h1 = 0;
+				unsigned short h2 = 0;
+				unsigned short h3 = 0;
+				unsigned short h4 = 0;
+				unsigned short p1 = 0;
+				unsigned short p2 = 0;
 
-				dw = scanf(pszParam, "%hu,%hu,%hu,%hu,%hu,%hu", &h1, &h2, &h3, &h4, &p1, &p2);
+				dw = sscanf(pszParam, "%hu,%hu,%hu,%hu,%hu,%hu", &h1, &h2, &h3, &h4, &p1, &p2);
 				
 				saiData.sin_addr.S_un.S_un_b.s_b1 = h1;
 				saiData.sin_addr.S_un.S_un_b.s_b2 = h2;
